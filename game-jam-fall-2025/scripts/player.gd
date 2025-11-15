@@ -6,7 +6,10 @@ const GRAVITY = 900
 var is_crouched = false
 
 
+
+
 func get_input(delta):
+	
 	var input = Input.get_vector("move_left","move_right","move_up","move_down")
 
 	# GRAVITY
@@ -53,6 +56,14 @@ func get_input(delta):
 	# ----------- JUMP -----------
 	if is_on_floor() and Input.is_action_just_pressed("move_up"):
 		velocity.y = -jump_height
+		
+	# ---------- SOUND -----------
+	if (input.x != 0 or input.y != 0) and !$AudioStream.playing:
+		$AudioStream.play()
+	if input.y > 0 and !$JumpSound.playing:
+		$JumpSound.play()
+		
+		
 		
 func _physics_process(delta: float) -> void:
 	get_input(delta)

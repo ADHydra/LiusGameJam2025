@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkhe2y2jacdcf"]
+[gd_scene load_steps=7 format=3 uid="uid://bkhe2y2jacdcf"]
 
 [ext_resource type="PackedScene" uid="uid://3x20rndm8p8b" path="res://scenes/level_1.tscn" id="1_nw50j"]
 [ext_resource type="PackedScene" uid="uid://2114h8sna6a4" path="res://scenes/player.tscn" id="2_yfatw"]
+[ext_resource type="AudioStream" uid="uid://bystlmpeclgfn" path="res://assets/SFX/Walking1.mp3" id="3_lw7xe"]
+[ext_resource type="AudioStream" uid="uid://pupyc436gcav" path="res://assets/SFX/InteNightGarden.mp3" id="3_yfatw"]
+[ext_resource type="AudioStream" uid="uid://bw56fiequ5olj" path="res://assets/SFX/Background.mp3" id="4_0p3nl"]
+[ext_resource type="AudioStream" uid="uid://col4f1sklgv4r" path="res://assets/SFX/Jump.wav" id="4_6tn8i"]
 
 [node name="main" type="Node2D"]
 
@@ -13,3 +17,22 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-1.9073486e-06, -91)
+
+[node name="AudioStream" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource("3_lw7xe")
+volume_db = -5.0
+pitch_scale = 0.84
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource("4_6tn8i")
+volume_db = -20.234
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yfatw")
+volume_db = -30.0
+autoplay = true
+
+[node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0p3nl")
+volume_db = -30.0
+autoplay = true
