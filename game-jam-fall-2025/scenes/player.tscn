@@ -97,16 +97,17 @@ script = ExtResource("1_qm0ti")
 
 [node name="player_animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -24)
 scale = Vector2(6.5, 6.5)
 sprite_frames = SubResource("SpriteFrames_0pev8")
-animation = &"Run"
-frame_progress = 0.9596904
+animation = &"crouch"
+frame_progress = 0.6577029
 
 [node name="normal_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_fjrip")
 debug_color = Color(0.8117647, 0.33333334, 0.62352943, 0.8666667)
 
 [node name="crouch_collision" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 24)
+position = Vector2(-1, 8)
 shape = SubResource("CapsuleShape2D_tuyoq")
 debug_color = Color(0.61856765, 0.52745914, 0.26851034, 0.8666667)
