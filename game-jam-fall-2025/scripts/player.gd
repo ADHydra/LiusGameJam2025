@@ -4,7 +4,14 @@ extends CharacterBody2D
 const GRAVITY = 900
 @export var jump_height = 400
 var is_crouched = false
+var is_on_glass_bottle = false
 
+func is_touching_glass_bottle() -> bool:
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("jump_bug"):
+			return true
+	return false
 
 func get_input(delta):
 	var input = Input.get_vector("move_left","move_right","move_up","move_down")
@@ -50,8 +57,9 @@ func get_input(delta):
 		else:
 			$player_animation.play("idle")
 
+	var jump_bug = is_touching_glass_bottle()
 	# ----------- JUMP -----------
-	if is_on_floor() and Input.is_action_just_pressed("move_up"):
+	if (is_on_floor() or jump_bug) and Input.is_action_just_pressed("move_up"):
 		velocity.y = -jump_height
 		
 func _physics_process(delta: float) -> void:

@@ -5,14 +5,6 @@
 [node name="Background Objects" type="Node2D"]
 z_index = -1
 
-[node name="PetBottle2x1 (2)" type="Sprite2D" parent="."]
-z_index = 1
-texture_filter = 1
-position = Vector2(208.61539, 104.61539)
-rotation = 3.1415927
-scale = Vector2(1, -1)
-texture = ExtResource("1_eswnk")
-
 [node name="PetBottle2x1 (2)2" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
