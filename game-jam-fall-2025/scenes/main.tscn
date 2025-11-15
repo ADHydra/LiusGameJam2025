@@ -1,9 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bniwafveq4qyb"]
+[gd_scene load_steps=4 format=3 uid="uid://bniwafveq4qyb"]
 
-[ext_resource type="PackedScene" uid="uid://2114h8sna6a4" path="res://scripts/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://2114h8sna6a4" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://biuiubsmjt1m2" path="res://assets/Looney-Tunes-Background-Art-2715611575.jpg" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cax8x2nmvb7jf" path="res://scenes/floor.tscn" id="3_sugp2"]
 
 [node name="main" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_o5qli")]
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(19.44455, 0.5000458)
+scale = Vector2(1.9114585, 1.9114585)
+texture = ExtResource("2_0wfyh")
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="player" parent="background" instance=ExtResource("1_o5qli")]
+position = Vector2(-10.172624, -0.2616043)
+scale = Vector2(0.5231607, 0.5231607)
+
+[node name="Camera2D" type="Camera2D" parent="background/player"]
+
+[node name="floor" parent="." instance=ExtResource("3_sugp2")]
+position = Vector2(-52, 324)
