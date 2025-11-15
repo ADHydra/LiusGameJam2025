@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://2114h8sna6a4"]
+[gd_scene load_steps=16 format=3 uid="uid://2114h8sna6a4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_qm0ti"]
 [ext_resource type="Texture2D" uid="uid://7i02e2sikqlg" path="res://assets/player_running_animation.png" id="2_qm0ti"]
 [ext_resource type="Texture2D" uid="uid://chcnq7cg50y08" path="res://assets/player_facing_right.png" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://coxago0cj5rfd" path="res://assets/player_idle.png" id="4_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bw3uo51ju3k4h" path="res://assets/player_jumping.png" id="5_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://ceinjrnnm04ih" path="res://assets/player_crouch.png" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fhbv5"]
 atlas = ExtResource("2_qm0ti")
@@ -49,6 +51,14 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tuyoq")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 100.0,
 "texture": ExtResource("3_dqkch")
 }, {
@@ -64,22 +74,40 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qlg0r")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 61.13101
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fjrip"]
+radius = 16.0
+height = 60.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tuyoq"]
+radius = 17.0
+height = 44.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_qm0ti")
 
 [node name="player_animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -24)
 scale = Vector2(6.5, 6.5)
 sprite_frames = SubResource("SpriteFrames_0pev8")
-animation = &"idle"
-frame_progress = 0.56726146
+animation = &"crouch"
+frame_progress = 0.6577029
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource("CircleShape2D_g2els")
+[node name="normal_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fjrip")
 debug_color = Color(0.8117647, 0.33333334, 0.62352943, 0.8666667)
+
+[node name="crouch_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
+shape = SubResource("CapsuleShape2D_tuyoq")
+debug_color = Color(0.61856765, 0.52745914, 0.26851034, 0.8666667)
