@@ -13,6 +13,14 @@ func is_touching_glass_bottle() -> bool:
 			return true
 	return false
 
+signal health_changed(amount)
+var hp = 10
+
+func take_damage(amount):
+	hp-= amount
+	hp = max(hp,0)
+	emit_signal("health_changed",hp)
+	
 func get_input(delta):
 	var input = Input.get_vector("move_left","move_right","move_up","move_down")
 
