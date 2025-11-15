@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ouf1qswrfwk"]
+
+[ext_resource type="Texture2D" uid="uid://cslhj77r7h7nc" path="res://assets/pet_bottle_2x1.png" id="1_eswnk"]
+
+[node name="Background Objects" type="Node2D"]
+z_index = -1
+
+[node name="PetBottle2x1 (2)" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(208.61539, 104.61539)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_eswnk")
+
+[node name="PetBottle2x1 (2)2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(200, 81)
+rotation = 1.5707964
+scale = Vector2(1, -1)
+texture = ExtResource("1_eswnk")

@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=3 uid="uid://6nhnuou1pa84"]
+
+[ext_resource type="Texture2D" uid="uid://cslhj77r7h7nc" path="res://assets/pet_bottle_2x1.png" id="1_1x1n7"]
+[ext_resource type="Texture2D" uid="uid://byl7u451gwd7j" path="res://assets/trash_bag_1x1.png" id="2_e0jo5"]
+
+[node name="Foreground objects" type="Node2D"]
+z_index = 1
+
+[node name="Bottles" type="Node2D" parent="."]
+
+[node name="PetBottle2x1" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(161.84616, 104.61539)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x3" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(176, 96)
+rotation = 1.5707964
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x4" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(224, 112)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x2" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(96.61539, 140.3077)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x5" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(8, 136)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x6" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(272, 128)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x7" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-56, 152)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x8" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-88, 160)
+rotation = 1.5707963
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x9" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-160, 96)
+rotation = 1.5707963
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="PetBottle2x10" type="Sprite2D" parent="Bottles"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-168, 104)
+rotation = 1.5707963
+scale = Vector2(1, -1)
+texture = ExtResource("1_1x1n7")
+
+[node name="Trash bags" type="Node2D" parent="."]
+
+[node name="TrashBag1x1" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(126.15385, 125.53846)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x3" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(72, 128)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x4" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(16, 152)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x5" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(-80, 112)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x7" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(-96, 104)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x8" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(-104, 112)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x6" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(-128, 104)
+texture = ExtResource("2_e0jo5")
+
+[node name="TrashBag1x2" type="Sprite2D" parent="Trash bags"]
+texture_filter = 1
+position = Vector2(243.07693, 108.30769)
+texture = ExtResource("2_e0jo5")

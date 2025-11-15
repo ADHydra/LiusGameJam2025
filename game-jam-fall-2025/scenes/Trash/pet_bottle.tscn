@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://xkjblka0h4gh"]
+
+[ext_resource type="Texture2D" uid="uid://cslhj77r7h7nc" path="res://assets/pet_bottle_2x1.png" id="1_ramd3"]
+
+[node name="pet_bottle" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="PetBottle2x1" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("1_ramd3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-16, 0, -7, 8, 14, 8, 16, 6, 16, -6, 14, -8, -7, -8)
