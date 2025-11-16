@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqb3pmevrwrfu"]
+[gd_scene load_steps=5 format=3 uid="uid://bqb3pmevrwrfu"]
 
 [ext_resource type="PackedScene" uid="uid://xkjblka0h4gh" path="res://scenes/Trash/pet_bottle.tscn" id="1_gkix3"]
 [ext_resource type="PackedScene" uid="uid://0urmec5y4w5d" path="res://scenes/Trash/glass_bottle.tscn" id="2_llt20"]
+[ext_resource type="PackedScene" uid="uid://csrn8t7tlgf4b" path="res://scenes/Trash/straw_ramp.tscn" id="3_crgsd"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gkix3"]
 a = Vector2(-5.722046e-06, -64)
@@ -79,3 +80,63 @@ position = Vector2(360, -80)
 
 [node name="glass_bottle3" parent="Obstacles" instance=ExtResource("2_llt20")]
 position = Vector2(368, -16)
+
+[node name="glass_bottle6" parent="Obstacles" instance=ExtResource("2_llt20")]
+position = Vector2(479, -16)
+
+[node name="Building" type="Node2D" parent="."]
+
+[node name="pet_bottle" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(500, -8)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="pet_bottle2" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(500, -24)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="pet_bottle3" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(500, -40)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Straws" parent="Building" instance=ExtResource("3_crgsd")]
+position = Vector2(581, -18)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Straws2" parent="Building" instance=ExtResource("3_crgsd")]
+position = Vector2(605, -28)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Straws3" parent="Building" instance=ExtResource("3_crgsd")]
+position = Vector2(629, -38)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Straws4" parent="Building" instance=ExtResource("3_crgsd")]
+position = Vector2(653, -48)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="pet_bottle4" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(703, -12)
+rotation = 1.5707964
+
+[node name="pet_bottle5" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(719, -12)
+rotation = 1.5707964
+
+[node name="pet_bottle6" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(735, -12)
+rotation = 1.5707964
+
+[node name="pet_bottle7" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(711, -44)
+rotation = 1.5707964
+
+[node name="pet_bottle8" parent="Building" instance=ExtResource("1_gkix3")]
+position = Vector2(727, -44)
+rotation = 1.5707964

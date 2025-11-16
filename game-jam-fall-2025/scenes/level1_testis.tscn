@@ -31,6 +31,10 @@ player = NodePath("../../player")
 position = Vector2(1952, 76)
 player = NodePath("../../player")
 
+[node name="broken glass 2" parent="damage objects" node_paths=PackedStringArray("player") instance=ExtResource("4_0p3nl")]
+position = Vector2(3892, 76)
+player = NodePath("../../player")
+
 [node name="glas" parent="damage objects" node_paths=PackedStringArray("player") instance=ExtResource("5_lw7xe")]
 position = Vector2(1864, 76)
 player = NodePath("../../player")
