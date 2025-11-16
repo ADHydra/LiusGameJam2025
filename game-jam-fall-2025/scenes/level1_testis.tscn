@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bniwafveq4qyb"]
+[gd_scene load_steps=6 format=3 uid="uid://bniwafveq4qyb"]
 
 [ext_resource type="PackedScene" uid="uid://3x20rndm8p8b" path="res://scenes/level_1.tscn" id="1_nw50j"]
 [ext_resource type="PackedScene" uid="uid://2114h8sna6a4" path="res://scenes/player.tscn" id="2_yfatw"]
 [ext_resource type="PackedScene" uid="uid://dpua7nf7rctun" path="res://scenes/health_bar.tscn" id="3_yfatw"]
 [ext_resource type="PackedScene" uid="uid://l2tbn3trqyhr" path="res://scenes/broken_glass1.tscn" id="4_0p3nl"]
+[ext_resource type="PackedScene" uid="uid://da6evwiiaweu2" path="res://scenes/broken_glass2.tscn" id="5_lw7xe"]
 
 [node name="main" type="Node2D"]
 
@@ -20,6 +21,16 @@ position = Vector2(-1.9073486e-06, -203)
 position = Vector2(-448, 104)
 player = NodePath("..")
 
-[node name="glas2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_0p3nl")]
+[node name="damage objects" type="Node2D" parent="."]
+
+[node name="glas2" parent="damage objects" node_paths=PackedStringArray("player") instance=ExtResource("4_0p3nl")]
 position = Vector2(-36, 76)
-player = NodePath("../player")
+player = NodePath("../../player")
+
+[node name="broken glass 1" parent="damage objects" node_paths=PackedStringArray("player") instance=ExtResource("4_0p3nl")]
+position = Vector2(1952, 76)
+player = NodePath("../../player")
+
+[node name="glas" parent="damage objects" node_paths=PackedStringArray("player") instance=ExtResource("5_lw7xe")]
+position = Vector2(1864, 76)
+player = NodePath("../../player")

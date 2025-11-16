@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://yjbrjy0kj2ch"]
+
+[ext_resource type="Texture2D" uid="uid://bwh2eivy16s03" path="res://assets/straws_2x1.png" id="1_4lmit"]
+
+[node name="Straws" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Straws2x1" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("1_4lmit")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-14, -6, -2, -3, 11, -6, 11, 7, -15, 7)

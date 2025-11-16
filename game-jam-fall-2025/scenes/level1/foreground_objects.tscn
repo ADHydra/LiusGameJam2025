@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://6nhnuou1pa84"]
+[gd_scene load_steps=5 format=3 uid="uid://6nhnuou1pa84"]
 
 [ext_resource type="Texture2D" uid="uid://cslhj77r7h7nc" path="res://assets/pet_bottle_2x1.png" id="1_1x1n7"]
 [ext_resource type="Texture2D" uid="uid://byl7u451gwd7j" path="res://assets/trash_bag_1x1.png" id="2_e0jo5"]
 [ext_resource type="Texture2D" uid="uid://cnbysklp0ecyi" path="res://assets/glass_bottle_1x2.png" id="3_e0jo5"]
+[ext_resource type="Texture2D" uid="uid://bwh2eivy16s03" path="res://assets/straws_2x1.png" id="4_qp3gv"]
 
 [node name="Foreground objects" type="Node2D"]
 z_index = 1
@@ -86,12 +87,12 @@ texture = ExtResource("1_1x1n7")
 
 [node name="TrashBag1x1" type="Sprite2D" parent="Trash bags"]
 texture_filter = 1
-position = Vector2(136, 120)
+position = Vector2(139, 127)
 texture = ExtResource("2_e0jo5")
 
 [node name="TrashBag1x10" type="Sprite2D" parent="Trash bags"]
 texture_filter = 1
-position = Vector2(128, 128)
+position = Vector2(147, 131)
 texture = ExtResource("2_e0jo5")
 
 [node name="TrashBag1x9" type="Sprite2D" parent="Trash bags"]
@@ -163,6 +164,11 @@ position = Vector2(256, 144)
 rotation = -1.5707964
 texture = ExtResource("3_e0jo5")
 
+[node name="GlassBottle1x6" type="Sprite2D" parent="Glass bottles"]
+texture_filter = 1
+position = Vector2(436, 97)
+texture = ExtResource("3_e0jo5")
+
 [node name="GlassBottle1x3" type="Sprite2D" parent="Glass bottles"]
 texture_filter = 1
 position = Vector2(40, 112)
@@ -176,3 +182,37 @@ position = Vector2(400, 144)
 rotation = -1.5707964
 scale = Vector2(1, -1)
 texture = ExtResource("3_e0jo5")
+
+[node name="Straws" type="Node2D" parent="."]
+
+[node name="Straws2x1" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(64, 152)
+texture = ExtResource("4_qp3gv")
+
+[node name="Straws2x2" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(208, 128)
+texture = ExtResource("4_qp3gv")
+
+[node name="Straws2x3" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(424, 152)
+texture = ExtResource("4_qp3gv")
+
+[node name="Straws2x4" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(-56, 120)
+texture = ExtResource("4_qp3gv")
+
+[node name="Straws2x5" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(-184, 128)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_qp3gv")
+
+[node name="Straws2x6" type="Sprite2D" parent="Straws"]
+texture_filter = 1
+position = Vector2(120, 112)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_qp3gv")
