@@ -47,9 +47,11 @@ func get_input(delta):
 		if input.x > 0:
 			$player_animation.flip_h = false
 			$player_animation.play("Run")
+
 		elif input.x < 0:
 			$player_animation.flip_h = true
 			$player_animation.play("Run")
+			
 		else:
 			$player_animation.play("idle")
 
@@ -58,8 +60,8 @@ func get_input(delta):
 		velocity.y = -jump_height
 		
 	# ---------- SOUND -----------
-	if (input.x != 0 or input.y != 0) and !$AudioStream.playing:
-		$AudioStream.play()
+	if (input.x != 0 or input.y != 0) and !$WalkingStream.playing and is_on_floor():
+		$WalkingStream.play()
 	if input.y < 0 and !$JumpSound.playing:
 		$JumpSound.play()
 		
