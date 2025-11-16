@@ -15,10 +15,11 @@ position = Vector2(56, 99.999985)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(-1.9073486e-06, -203)
+position = Vector2(-1.9073486e-06, -132)
 
 [node name="health_bar" parent="player" node_paths=PackedStringArray("player") instance=ExtResource("3_yfatw")]
-position = Vector2(-448, 104)
+z_index = 5
+position = Vector2(-516, 180.00003)
 player = NodePath("..")
 
 [node name="damage objects" type="Node2D" parent="."]
