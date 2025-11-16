@@ -60,7 +60,7 @@ func get_input(delta):
 	# ---------- SOUND -----------
 	if (input.x != 0 or input.y != 0) and !$AudioStream.playing:
 		$AudioStream.play()
-	if input.y > 0 and !$JumpSound.playing:
+	if input.y < 0 and !$JumpSound.playing:
 		$JumpSound.play()
 		
 		
