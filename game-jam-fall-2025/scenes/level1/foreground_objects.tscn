@@ -60,7 +60,7 @@ texture = ExtResource("1_1x1n7")
 [node name="PetBottle2x7" type="Sprite2D" parent="Pet bottles/PetBottle2x4"]
 z_index = 1
 texture_filter = 1
-position = Vector2(286, 2)
+position = Vector2(286, -4)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 texture = ExtResource("1_1x1n7")
@@ -68,7 +68,7 @@ texture = ExtResource("1_1x1n7")
 [node name="PetBottle2x8" type="Sprite2D" parent="Pet bottles/PetBottle2x4"]
 z_index = 1
 texture_filter = 1
-position = Vector2(254, 10)
+position = Vector2(254, 4)
 rotation = 1.5707963
 scale = Vector2(1, -1)
 texture = ExtResource("1_1x1n7")
@@ -125,12 +125,6 @@ texture_filter = 1
 position = Vector2(550, -6)
 texture = ExtResource("4_qp3gv")
 
-[node name="PetBottle2x11" type="Sprite2D" parent="Pet bottles"]
-z_index = 1
-texture_filter = 1
-position = Vector2(288, 160)
-texture = ExtResource("1_1x1n7")
-
 [node name="PetBottle2x5" type="Sprite2D" parent="Pet bottles"]
 z_index = 1
 texture_filter = 1
@@ -147,38 +141,6 @@ rotation = 3.1415927
 scale = Vector2(1, -1)
 texture = ExtResource("1_1x1n7")
 
-[node name="PetBottle2x7" type="Sprite2D" parent="Pet bottles"]
-z_index = 1
-texture_filter = 1
-position = Vector2(-56, 152)
-rotation = 3.1415927
-scale = Vector2(1, -1)
-texture = ExtResource("1_1x1n7")
-
-[node name="PetBottle2x8" type="Sprite2D" parent="Pet bottles"]
-z_index = 1
-texture_filter = 1
-position = Vector2(-88, 160)
-rotation = 1.5707963
-scale = Vector2(1, -1)
-texture = ExtResource("1_1x1n7")
-
-[node name="PetBottle2x9" type="Sprite2D" parent="Pet bottles"]
-z_index = 1
-texture_filter = 1
-position = Vector2(-160, 96)
-rotation = 1.5707963
-scale = Vector2(1, -1)
-texture = ExtResource("1_1x1n7")
-
-[node name="PetBottle2x10" type="Sprite2D" parent="Pet bottles"]
-z_index = 1
-texture_filter = 1
-position = Vector2(-168, 104)
-rotation = 1.5707963
-scale = Vector2(1, -1)
-texture = ExtResource("1_1x1n7")
-
 [node name="Trash bags" type="Node2D" parent="."]
 
 [node name="TrashBag1x1" type="Sprite2D" parent="Trash bags"]
@@ -189,11 +151,6 @@ texture = ExtResource("2_e0jo5")
 [node name="TrashBag1x10" type="Sprite2D" parent="Trash bags"]
 texture_filter = 1
 position = Vector2(147, 131)
-texture = ExtResource("2_e0jo5")
-
-[node name="TrashBag1x9" type="Sprite2D" parent="Trash bags"]
-texture_filter = 1
-position = Vector2(176, 152)
 texture = ExtResource("2_e0jo5")
 
 [node name="TrashBag1x11" type="Sprite2D" parent="Trash bags"]
@@ -216,11 +173,6 @@ texture_filter = 1
 position = Vector2(72, 128)
 texture = ExtResource("2_e0jo5")
 
-[node name="TrashBag1x4" type="Sprite2D" parent="Trash bags"]
-texture_filter = 1
-position = Vector2(16, 152)
-texture = ExtResource("2_e0jo5")
-
 [node name="TrashBag1x5" type="Sprite2D" parent="Trash bags"]
 texture_filter = 1
 position = Vector2(-80, 112)
@@ -228,17 +180,7 @@ texture = ExtResource("2_e0jo5")
 
 [node name="TrashBag1x7" type="Sprite2D" parent="Trash bags"]
 texture_filter = 1
-position = Vector2(-96, 104)
-texture = ExtResource("2_e0jo5")
-
-[node name="TrashBag1x8" type="Sprite2D" parent="Trash bags"]
-texture_filter = 1
-position = Vector2(-104, 112)
-texture = ExtResource("2_e0jo5")
-
-[node name="TrashBag1x6" type="Sprite2D" parent="Trash bags"]
-texture_filter = 1
-position = Vector2(-128, 104)
+position = Vector2(-95, 108)
 texture = ExtResource("2_e0jo5")
 
 [node name="TrashBag1x2" type="Sprite2D" parent="Trash bags"]
@@ -306,12 +248,6 @@ texture = ExtResource("4_qp3gv")
 [node name="Straws2x4" type="Sprite2D" parent="Straws"]
 texture_filter = 1
 position = Vector2(-56, 120)
-texture = ExtResource("4_qp3gv")
-
-[node name="Straws2x5" type="Sprite2D" parent="Straws"]
-texture_filter = 1
-position = Vector2(-184, 128)
-scale = Vector2(-1, 1)
 texture = ExtResource("4_qp3gv")
 
 [node name="Straws2x6" type="Sprite2D" parent="Straws"]
