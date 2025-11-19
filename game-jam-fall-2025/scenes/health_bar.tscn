@@ -9,6 +9,7 @@ bg_color = Color(0.5803922, 0.47058824, 0.4862745, 1)
 bg_color = Color(0.6, 0.23921569, 0.23921569, 1)
 
 [node name="health_bar" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_1bvlm")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]

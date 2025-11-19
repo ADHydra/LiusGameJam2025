@@ -1,11 +1,18 @@
 extends CharacterBody2D
+
 @export var SPEED = 300
 @export var crouch_speed = 100
-const GRAVITY = 900
 @export var jump_height = 400
+@export var segul: PackedScene
+const GRAVITY = 900
+
 var is_crouched = false
 var is_on_glass_bottle = false
+var can_move = true
 
+
+	
+	
 func is_touching_glass_bottle() -> bool:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
@@ -44,6 +51,7 @@ func get_input(delta):
 			$player_animation.flip_h = false
 		elif input.x < 0:
 			$player_animation.flip_h = true
+		
 
 	else:
 		# Exit crouch
@@ -71,5 +79,8 @@ func get_input(delta):
 		velocity.y = -jump_height
 		
 func _physics_process(delta: float) -> void:
-	get_input(delta)
-	move_and_slide()
+	if can_move == true:
+			get_input(delta)
+			move_and_slide()
+	
+	
