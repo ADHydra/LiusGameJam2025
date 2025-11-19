@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkhe2y2jacdcf"]
+
+[ext_resource type="PackedScene" uid="uid://3x20rndm8p8b" path="res://scenes/level_1.tscn" id="1_nw50j"]
+[ext_resource type="PackedScene" uid="uid://2114h8sna6a4" path="res://scenes/player.tscn" id="2_yfatw"]
+[ext_resource type="PackedScene" uid="uid://bu3r5kqfe633v" path="res://scenes/health.tscn" id="3_yfatw"]
+[ext_resource type="PackedScene" uid="uid://dfu8ywfs0gku1" path="res://scenes/glass.tscn" id="4_0p3nl"]
+
+[node name="main" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_nw50j")]
+
+[node name="player" parent="." instance=ExtResource("2_yfatw")]
+position = Vector2(1.9073486e-06, 99.99999)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(-1.9073486e-06, -203)
+
+[node name="health" parent="player/Camera2D" instance=ExtResource("3_yfatw")]
+offset_left = -444.99994
+offset_top = -173.00003
+offset_right = -134.99997
+offset_bottom = -154.0
+
+[node name="glass" parent="." instance=ExtResource("4_0p3nl")]
+position = Vector2(702, 69)

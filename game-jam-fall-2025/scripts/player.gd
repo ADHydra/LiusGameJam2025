@@ -1,13 +1,35 @@
 extends CharacterBody2D
+
 @export var SPEED = 300
 @export var crouch_speed = 100
-const GRAVITY = 900
 @export var jump_height = 400
+@export var segul: PackedScene
+const GRAVITY = 900
+
 var is_crouched = false
+var is_on_glass_bottle = false
+var can_move = true
 
 
 
 
+	
+	
+func is_touching_glass_bottle() -> bool:
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider().is_in_group("jump_bug"):
+			return true
+	return false
+
+signal health_changed(amount)
+var hp = 10
+
+func take_damage(amount):
+	hp-= amount
+	hp = max(hp,0)
+	emit_signal("health_changed",hp)
+	
 func get_input(delta):
 	
 	var input = Input.get_vector("move_left","move_right","move_up","move_down")
@@ -32,6 +54,7 @@ func get_input(delta):
 			$player_animation.flip_h = false
 		elif input.x < 0:
 			$player_animation.flip_h = true
+		
 
 	else:
 		# Exit crouch
@@ -55,8 +78,9 @@ func get_input(delta):
 		else:
 			$player_animation.play("idle")
 
+	var jump_bug = is_touching_glass_bottle()
 	# ----------- JUMP -----------
-	if is_on_floor() and Input.is_action_just_pressed("move_up"):
+	if (is_on_floor() or jump_bug) and Input.is_action_just_pressed("move_up"):
 		velocity.y = -jump_height
 		
 	# ---------- SOUND -----------
@@ -68,5 +92,8 @@ func get_input(delta):
 		
 		
 func _physics_process(delta: float) -> void:
-	get_input(delta)
-	move_and_slide()
+	if can_move == true:
+			get_input(delta)
+			move_and_slide()
+	
+	

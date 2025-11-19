@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://0urmec5y4w5d"]
+
+[ext_resource type="Texture2D" uid="uid://cnbysklp0ecyi" path="res://assets/glass_bottle_1x2.png" id="1_tcuk8"]
+[ext_resource type="Script" uid="uid://knmdud0sh2uo" path="res://scripts/jump_bug.gd" id="2_382va"]
+
+[node name="glass_bottle" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["jump_bug"]]
+
+[node name="GlassBottle1x2" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+position = Vector2(-2, 0)
+texture = ExtResource("1_tcuk8")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+script = ExtResource("2_382va")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Area2D"]
+position = Vector2(-2, 0)
+polygon = PackedVector2Array(-7, -16, -7, 16, 7, 16, 7, -16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-2, 0)
+polygon = PackedVector2Array(-6, -6, -6, 16, 6, 16, 6, -6, 3, -7, 3, -16, -3, -16, -3, -7)
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_exited"]

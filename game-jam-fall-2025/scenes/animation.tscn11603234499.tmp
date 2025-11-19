@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbs1nfqmpti5b"]
+
+[ext_resource type="Script" uid="uid://dbvptr2c3nfyx" path="res://scripts/animation.gd" id="1_p5qov"]
+[ext_resource type="PackedScene" uid="uid://cqmscoasgr3uu" path="res://scenes/seagull.tscn" id="2_u0f4s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdhw"]
+size = Vector2(910, 463)
+
+[node name="Animation" type="Node2D" node_paths=PackedStringArray("player", "segul")]
+script = ExtResource("1_p5qov")
+player = NodePath("")
+segul = NodePath("segul")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(445, -221.5)
+shape = SubResource("RectangleShape2D_ikdhw")
+debug_color = Color(0.76725626, 0.1651645, 1, 0.41960785)
+
+[node name="segul" parent="." instance=ExtResource("2_u0f4s")]
+position = Vector2(1849, -1095)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_top = 5.0000005
+offset_right = 68.20809
+offset_bottom = 10.213097
+scale = Vector2(13.502797, 129.4816)
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
