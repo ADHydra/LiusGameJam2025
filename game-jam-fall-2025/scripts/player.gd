@@ -11,8 +11,6 @@ var is_on_glass_bottle = false
 var can_move = true
 
 
-
-
 	
 	
 func is_touching_glass_bottle() -> bool:
@@ -31,7 +29,6 @@ func take_damage(amount):
 	emit_signal("health_changed",hp)
 	
 func get_input(delta):
-	
 	var input = Input.get_vector("move_left","move_right","move_up","move_down")
 
 	# GRAVITY
@@ -70,11 +67,9 @@ func get_input(delta):
 		if input.x > 0:
 			$player_animation.flip_h = false
 			$player_animation.play("Run")
-
 		elif input.x < 0:
 			$player_animation.flip_h = true
 			$player_animation.play("Run")
-			
 		else:
 			$player_animation.play("idle")
 
@@ -82,14 +77,6 @@ func get_input(delta):
 	# ----------- JUMP -----------
 	if (is_on_floor() or jump_bug) and Input.is_action_just_pressed("move_up"):
 		velocity.y = -jump_height
-		
-	# ---------- SOUND -----------
-	if (input.x != 0 or input.y != 0) and !$WalkingStream.playing and is_on_floor():
-		$WalkingStream.play()
-	if input.y < 0 and !$JumpSound.playing:
-		$JumpSound.play()
-		
-		
 		
 func _physics_process(delta: float) -> void:
 	if can_move == true:
